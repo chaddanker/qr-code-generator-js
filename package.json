@@ -1,0 +1,11 @@
+{
+  "name": "find-me-vanilla",
+  "version": "1.0.0",
+  "description": "Is a location based application, designed to help courier services, more accurately, find client locations.",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "author": "Chad Danker",
+  "license": "MIT"
+}

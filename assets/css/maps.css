@@ -1,0 +1,152 @@
+html, body {
+    text-align: center;
+}
+
+* {
+    font-family: 'Roboto', sans-serif !important;
+}
+
+#map {
+    text-align:left;
+    height: 90%;
+    width: 100vw !important;
+    box-shadow: 0 0 20px 5px #00000050;
+}
+
+#map-user {
+    text-align:left;
+    height: 100vh;
+    width: 100vw !important;
+    box-shadow: 0 0 20px 5px #00000050;   
+}
+
+h1 {
+    margin: 1em auto;
+    padding-top: 1em;
+}
+
+.marker {
+    /* background-image: url('icon.png');
+    background-size: cover; */
+    background-color: #25d366;
+    width: 30px;
+    height: 30px;
+    border-radius: 50%;
+    cursor: pointer;
+    box-shadow: 0 0 5px 5px #00000050;
+}
+
+.marker-user {
+    background-color: #25d366;
+    width: 30px;
+    height: 30px;
+    border-radius: 50%;
+    cursor: pointer;
+    box-shadow: 0 0 5px 5px #00000050;
+}
+
+.next {
+    position: fixed;
+    z-index: 999;
+    right: 1em;
+    bottom: 1em;
+}
+
+.prev {
+    position: fixed;
+    z-index: 999;
+    left: 1em;
+    bottom: 1em;
+}
+
+#WAButton {
+    margin: 0.5em 50% !important;
+}
+
+.floating-wpp .floating-wpp-button img, .floating-wpp .floating-wpp-button svg {
+    border-radius: 70px !important;
+}
+
+#phone {
+    width: 70px;
+    height: 70px;
+    border-radius: 50%;
+    cursor: pointer;
+    background-color: #ffffff;
+    position: absolute;
+    bottom: 1.11em;
+    left: 43.05%;
+    z-index: 9999;
+    box-shadow: 0 0 5px 3px #00000020;
+    color: white;
+    font-size: 1.5em;
+}
+
+#phone:hover {
+    bottom: 1.21em;
+}
+
+.phone-text {
+    padding: 0.75em;
+    /* padding-top: 1.1em; */
+}
+
+.mapboxgl-popup {
+    max-width: 200px;
+}
+  
+.mapboxgl-popup-content {
+    text-align: center;
+    font-family: 'Open Sans', sans-serif;
+}
+
+.geocoder {
+    position: absolute;
+    z-index: 1;
+    width: 100% !important;
+    margin: 1em 36%;
+    top: 7em;
+}
+
+.mapboxgl-ctrl-geocoder {
+    min-width: 100%;
+}
+
+@media screen and (max-width: 600px) {
+    h1 {
+        font-size: 2em;
+    }
+
+    #phone {
+        left: 30%;
+    }
+
+    #WAButton {
+        margin: 0.5em 47% !important;
+    }
+
+    .marker-user {
+        background-color: #25d366;
+        width: 37.5px;
+        height: 37.5px;
+        border-radius: 50%;
+        cursor: pointer;
+        box-shadow: 0 0 5px 5px #00000050;
+    }
+
+    .geocoder {
+        position: absolute;
+        z-index: 1;
+        width: 100vw;
+        top: 9em;
+        left: 0;
+        right: 0;
+        margin-left: 0;
+        margin-right: 0;
+    }
+    .mapboxgl-ctrl-geocoder {
+        min-width: 100%;
+    }
+    
+}
+

@@ -1,0 +1,49 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="ko" lang="ko">
+  <head>
+    <title>Find Me | South Africa</title>
+    <meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <!-- JQUERY AND QRCODE LIB -->
+    <script type="text/javascript" src="assets/js/jquery.min.js"></script>
+    <script type="text/javascript" src="assets/js/qrcode.js"></script>
+    <!-- STYLESHEET -->
+    <link rel="stylesheet" href="assets/css/styles.css">
+    <!-- FONT AND SEMANTIC -->
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Roboto:300,400,500,700&display=swap" />
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/semantic-ui/2.4.1/semantic.min.css" integrity="sha512-8bHTC73gkZ7rZ7vpqUQThUDhqcNFyYi2xgDgPDHc+GXVGHXq+xPjynxIopALmOPqzo9JZj0k6OqqewdGO3EsrQ==" crossorigin="anonymous" />
+  </head>
+  <body style="text-align: center;">
+    <div class="app">
+      <form class="ui form">
+      <h1 style="text-align: center; font-weight: 100;">Find Me - ZA</h1>
+        <div class="field">
+          <input id="name" type="text" name="first-name" placeholder="First Name">
+        </div>
+        <div class="field">
+          <input id="name-l" type="text" name="last-name" placeholder="Last Name">
+        </div>
+        <div class="field">
+          <input id="cell" type="text" value="+27" name="phone-number" placeholder="Phone Number">
+        </div>
+        <div>
+          <!-- <h1 id="header">Find Me - South Africa</h1> -->
+          <p style="font-size: 0.9em; padding-top: 1em; margin-bottom: 0;">Create your findme link below.</p>
+          <p style="font-size: 0.7em; color: #00000090;">Simply send packages with the link below to help drivers easily find your location.</p>
+          <label for="text">findme.co.za?</label>
+          <div class="ui input">
+            <input id="username" type="text" value="" placeholder="username" />
+          </div>
+        </div>
+        <div class="qr-container">
+        <svg id="qrsvg" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+          <g id="qrcode"/>
+        </svg>
+        </div>
+      </form>
+      <button onclick="next()" class="ui button blue next">next</button>
+    </div>
+
+    <script type="text/javascript" src="assets/js/script.js"></script>
+  </body>
+</html>

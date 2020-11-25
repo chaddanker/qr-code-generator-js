@@ -1,0 +1,72 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="ko" lang="ko">
+  <head>
+    <title>Find Me | South Africa</title>
+    <meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <!-- JQUERY AND QRCODE LIB -->
+    <script type="text/javascript" src="assets/js/jquery.min.js"></script>
+    <script type="text/javascript" src="assets/js/qrcode.js"></script>
+    <!-- STYLESHEET -->
+    <link rel="stylesheet" href="assets/css/styles.css">
+    <!-- W3W -->
+    <!-- <script src="https://assets.what3words.com/sdk/v3/what3words.js?key=287VYVUR"></script> -->
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Roboto:300,400,500,700&display=swap" />
+    <!-- FONT AND SEMANTIC -->
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Roboto:300,400,500,700&display=swap" />
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/semantic-ui/2.4.1/semantic.min.css" integrity="sha512-8bHTC73gkZ7rZ7vpqUQThUDhqcNFyYi2xgDgPDHc+GXVGHXq+xPjynxIopALmOPqzo9JZj0k6OqqewdGO3EsrQ==" crossorigin="anonymous" />
+  </head>
+  <body class="done-page">
+    <h1 style="padding-top: 1em;">Your QR Code</h1>
+    <p>Print and paste your code onto sent packages.</p>
+    <a id="your-link"></a>
+    <div class="qr-container">
+        <svg id="qrsvg" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+          <g id="qrcode"/>
+        </svg>
+    </div>
+    <button class="ui button blue" onclick="download()">download</button>
+    <script src="assets/js/qrscript.js"></script>
+    <script type="text/javascript">
+        var qrcode = new QRCode(document.getElementById("qrcode"), {
+            width : 100,
+            height : 100,
+            useSVG: true
+        });
+    
+        function makeCode () {		
+            var elText = document.getElementById("text");
+            qrcode.makeCode(`https://find-me-lime.vercel.app?${sessionStorage.getItem("username")}`);
+        }
+    
+        makeCode();
+        $("#text").
+            on("blur", function () {
+                makeCode();
+            }).
+            on("keydown", function (e) {
+                if (e.key.length < 2) {
+                  console.log(e);
+                    makeCode();
+                }
+            });
+
+        function svgDataURL(svg) {
+          var svgAsXML = (new XMLSerializer).serializeToString(svg);
+          return "data:image/svg+xml," + encodeURIComponent(svgAsXML);
+        }
+
+        function download(){
+            var dataURL = svgDataURL(document.querySelector('#qrsvg'));
+            var dl = document.createElement("a");
+            document.body.appendChild(dl); // This line makes it work in Firefox.
+            dl.setAttribute("href", dataURL);
+            dl.setAttribute("download", "test.svg");
+            dl.click();
+        }
+
+        document.querySelector('#your-link').innerHTML = `https://find-me-lime.vercel.app?${sessionStorage.getItem("username")}`;
+        document.querySelector('#your-link').href = `index.html?${sessionStorage.getItem("username")}`;
+        </script>
+  </body>
+</html>  

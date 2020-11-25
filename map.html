@@ -1,0 +1,25 @@
+<html>
+  <head>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="preconnect" href="https://fonts.gstatic.com">
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@100&display=swap" rel="stylesheet">
+    <!-- <script src="https://assets.what3words.com/sdk/v3.1/what3words.js?key=287VYVUR"></script> -->
+    <script src="https://api.tiles.mapbox.com/mapbox-gl-js/v0.53.0/mapbox-gl.js"></script>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/semantic-ui/2.4.1/semantic.min.css" integrity="sha512-8bHTC73gkZ7rZ7vpqUQThUDhqcNFyYi2xgDgPDHc+GXVGHXq+xPjynxIopALmOPqzo9JZj0k6OqqewdGO3EsrQ==" crossorigin="anonymous" />
+    <link href="https://api.tiles.mapbox.com/mapbox-gl-js/v0.53.0/mapbox-gl.css" rel="stylesheet" />
+    <link rel="stylesheet" href="assets/css/maps.css" />
+    <!-- Geocoder -->
+    <script src='https://api.mapbox.com/mapbox-gl-js/plugins/mapbox-gl-geocoder/v4.2.0/mapbox-gl-geocoder.min.js'></script>
+    <link rel='stylesheet' href='https://api.mapbox.com/mapbox-gl-js/plugins/mapbox-gl-geocoder/v4.2.0/mapbox-gl-geocoder.css' type='text/css' />
+    <script type="text/javascript" src="config/keys.js"></script>
+  </head>
+
+  <body>
+    <h1>Find and click on your exact location</h1>
+    <div id="geocoder" class="geocoder"></div>
+    <div id="map"></div>
+    <a href='index.html' class="ui button blue prev">prev</a>
+    <button onclick="nextClick()" class="ui button blue next">next</button>
+    <script src="assets/js/map.js"></script>
+  </body>
+</html>
