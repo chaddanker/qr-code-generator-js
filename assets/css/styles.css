@@ -17,19 +17,19 @@ label {
 
 form {
     text-align: left;
-    width: 300px;
+    width: 400px;
     margin: 2em auto;
 }
 
 h1 {
-    padding-top: 1em !important;
+    font-size: 3em !important;
     font-weight: 200;
+    margin-bottom: 1em !important;
 }
 
 #header {
     font-family: 'Roboto', sans-serif !important;
     font-weight: 100;
-    font-size: 2em !important;
 }
 
 .field input {
@@ -69,13 +69,14 @@ position: relative;
     width: 120px; 
     margin: 1em auto;
     padding: 0;
+    padding-left: 0.6em;
     font-size: 1.5em;
     color: lightgray;
 }
 
 .next {
-    width: 300px;
-    margin-top: 2em !important;
+    margin: 1em auto !important;
+    width: 400px;
 }
 
 .qr-container {
@@ -103,21 +104,30 @@ position: relative;
         font-size: 3em !important;
     }
 
-.field input {
-    background-color: #fafafa !important;
-    border: none !important;
-    border-bottom: 2px solid black !important;
-    color: black !important;
-    border-radius: 0 !important;
-    width: 100% !important;
-}
+    .field input {
+        background-color: #fafafa !important;
+        border: none !important;
+        border-bottom: 2px solid black !important;
+        color: black !important;
+        border-radius: 0 !important;
+        width: 100% !important;
+    }
 
-.ui.input input {
-    background-color: #fafafa !important;
-    border: none !important;
-    border-bottom: 2px solid black !important;
-    color: black !important;
-    border-radius: 0 !important;
-} 
+    .ui.input input {
+        background-color: #fafafa !important;
+        border: none !important;
+        border-bottom: 2px solid black !important;
+        color: black !important;
+        border-radius: 0 !important;
+    } 
 
+    form {
+        text-align: left;
+        width: 100%;
+        margin: 2em auto;
+    }
+
+    .next {
+        width: 100%;
+    }
 }
