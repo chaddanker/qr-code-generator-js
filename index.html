@@ -15,32 +15,21 @@
   </head>
   <body style="text-align: center;">
     <div class="app">
-      <form class="ui form">
-      <h1 style="text-align: center; font-weight: 100;">Find Me - ZA</h1>
-        <div class="field">
-          <input id="name" type="text" name="first-name" placeholder="First Name">
+      <div style="text-align: center;">
+        <h1 style="font-family: 'Roboto'; font-weight: 100;">QR Code Generator</h1>
+        <div class="ui input">
+          <input id="text" type="text" value="" placeholder="your text here..." />
         </div>
-        <div class="field">
-          <input id="name-l" type="text" name="last-name" placeholder="Last Name">
+        <div class="qr-container">
+            <svg id="qrsvg" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+              <g id="qrcode"/>
+            </svg>
         </div>
-        <div class="field">
-          <input id="cell" type="text" value="+27" name="phone-number" placeholder="Phone Number">
+        <div style="margin-top: 3em;">
+          <button onclick="download()" class="ui button blue next">download SVG</button>
         </div>
-        <div>
-          <!-- <h1 id="header">Find Me - South Africa</h1> -->
-          <p style="font-size: 0.9em; padding-top: 1em; margin-bottom: 0;">Create your findme link below.</p>
-          <p style="font-size: 0.7em; color: #00000090;">Simply send packages with the link below to help drivers easily find your location.</p>
-          <div style="text-align: center;">
-            <label for="text">findme.co.za?</label>
-            <div class="ui input">
-              <input id="username" type="text" value="" placeholder="username" />
-            </div>
-          </div>
-        </div>
-      </form>
-      <button onclick="next()" class="ui button blue next">next</button>
+      </div>
     </div>
-
-    <script type="text/javascript" src="assets/js/script.js"></script>
+    <script type="text/javascript" src="assets/js/qrscript.js"></script>
   </body>
 </html>

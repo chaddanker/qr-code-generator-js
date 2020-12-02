@@ -7,7 +7,7 @@ html, body {
     height: 100%;
     margin: 0;
     padding: 0;
-    background-color: #fafafa !important;
+    background-color: #ffffff !important;
     font-family: 'Roboto', sans-serif !important;
 }
 
@@ -33,7 +33,7 @@ h1 {
 }
 
 .field input {
-    background-color: #fafafa !important;
+    background-color: #ffffff !important;
     border: none !important;
     border-bottom: 2px solid black !important;
     color: black !important;
@@ -41,7 +41,7 @@ h1 {
 }
 
 .ui.input input {
-    background-color: #fafafa !important;
+    background-color: #ffffff !important;
     border: none !important;
     border-bottom: 2px solid black !important;
     color: black !important;
@@ -61,7 +61,7 @@ position: relative;
     width: 90%;
     margin: 0 auto;
     padding: 2em 0;
-    background-color: #fafafa;
+    background-color: #ffffff;
 
 }
 
@@ -72,6 +72,10 @@ position: relative;
     padding-left: 0.6em;
     font-size: 1.5em;
     color: lightgray;
+}
+
+#text {
+    width: 100%;
 }
 
 .next {

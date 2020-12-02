@@ -6,7 +6,7 @@ var qrcode = new QRCode(document.getElementById("qrcode"), {
 
 function makeCode () {		
     var elText = document.getElementById("text");
-    qrcode.makeCode(`https://findmeza.vercel.app?${sessionStorage.getItem("username")}`);
+    qrcode.makeCode(elText.value);
 }
 
 makeCode();
@@ -34,6 +34,3 @@ function download(){
     dl.setAttribute("download", "test.svg");
     dl.click();
 }
-
-document.querySelector('#your-link').innerHTML = `https://findmeza.vercel.app?${sessionStorage.getItem("username")}`;
-document.querySelector('#your-link').href = `index.html?${sessionStorage.getItem("username")}`;
